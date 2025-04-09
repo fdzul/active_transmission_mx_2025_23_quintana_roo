@@ -16,3 +16,108 @@ library(magrittr)
 
 # [**Cadenas de Transmisión**]{style="font-size:8pt"}
 
+::: panel-tabset
+
+### [**Cancún**]{style="color:#990000"}
+
+```{r chain_cancun}
+denhotspots::transmission_chains_map(geocoded_dataset = z,
+                                     cve_edo = "23",
+                                     locality = "Cancun",
+                                     dengue_cases = "Probable")
+```
+
+
+### [**Chetumal**]{style="color:#990000"}
+
+```{r chain_chetumal}
+denhotspots::transmission_chains_map(geocoded_dataset = z,
+                                     cve_edo = "23",
+                                     locality = "Chetumal",
+                                     dengue_cases = "Probable")
+```
+
+
+:::
+
+
+# [**Mapas de Calor**]{style="font-size:8pt"}
+
+::: panel-tabset
+
+### [**Cancún**]{style="color:#990000"}
+```{r heatmap_cancun}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "23",
+                   locality = "Cancun",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+### [**Chetumal**]{style="color:#990000"}
+```{r heatmap_chetumal}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "23",
+                   locality = "Chetumal",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+### [**Isla Mujeres**]{style="color:#990000"}
+```{r heatmap_isla_m}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "23",
+                   locality = "Isla Mujeres",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+### [**Cozumel**]{style="color:#990000"}
+```{r heatmap_cozumel}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "23",
+                   locality = "Cozumel",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+### [**Felipe Carrillo Puerto**]{style="color:#990000"}
+```{r heatmap_felipe}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "23",
+                   locality = "Felipe Carrillo Puerto",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
+
+:::
