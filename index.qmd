@@ -10,7 +10,8 @@ theme: custom.scss
 library(sf)
 mapview::mapviewOptions(default = TRUE,
                         basemaps.color.shuffle = FALSE)
-load("/Users/felipedzul/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+#load("/Users/felipedzul/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+load("~/Documents/geocoding_mx/2025/8.RData/denmex_2025.RData")
 library(magrittr)
 ```
 
@@ -47,7 +48,7 @@ denhotspots::transmission_chains_map(geocoded_dataset = z,
 
 ### [**Cancún**]{style="color:#990000"}
 ```{r heatmap_cancun}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "23",
                    locality = "Cancun",
                    status_caso = c(1, 2),
@@ -63,7 +64,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
 
 ### [**Chetumal**]{style="color:#990000"}
 ```{r heatmap_chetumal}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "23",
                    locality = "Chetumal",
                    status_caso = c(1, 2),
@@ -79,7 +80,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
 
 ### [**Isla Mujeres**]{style="color:#990000"}
 ```{r heatmap_isla_m}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "23",
                    locality = "Isla Mujeres",
                    status_caso = c(1, 2),
@@ -95,7 +96,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
 
 ### [**Cozumel**]{style="color:#990000"}
 ```{r heatmap_cozumel}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "23",
                    locality = "Cozumel",
                    status_caso = c(1, 2),
@@ -111,7 +112,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
 
 ### [**Felipe Carrillo Puerto**]{style="color:#990000"}
 ```{r heatmap_felipe}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "23",
                    locality = "Felipe Carrillo Puerto",
                    status_caso = c(1, 2),
